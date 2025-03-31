@@ -1,0 +1,120 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - The Authoritarian Republic of Dewbayeh</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('flag.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: -1;
+        }
+        header {
+            background-color: #003366;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+        nav {
+            background-color: #002244;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #004488;
+        }
+        .content {
+            padding: 20px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            text-align: left;
+        }
+        .news-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+        .news-title {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>News - The Authoritarian Republic of Dewbayeh</header><nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="laws.html">Laws</a>
+    <a href="contact.html">Contact</a>
+    <a href="tourism.html">Tourism</a>
+    <a href="news.html">News</a>
+    <a href="services.html">Services</a>
+    <a href="recruitment.html">Recruitment</a>
+</nav>
+
+<div class="content">
+    <h2>Latest Government Announcements</h2>
+    <div id="news-container"></div>
+</div>
+
+<footer>
+    &copy; 2025 The Authoritarian Republic of Dewbayeh. All rights reserved.
+</footer>
+
+<script>
+    const newsData = [
+        { title: "National Infrastructure Expansion Underway", content: "The government has announced a major expansion of roads, bridges, and energy sectors to ensure self-sufficiency and national growth." },
+        { title: "Compulsory Military Training for All Citizens", content: "All citizens upon reaching the age of 18 are required to undergo three years of military training to ensure national defense readiness." },
+        { title: "Supreme Leaders Addresses the Nation", content: "The Generalissimo and The Senate deliver a powerful speech on national unity, strength, and the unwavering vision for the future of Dewbayeh." },
+        { title: "New Industrial Zones to Boost Economy", content: "State-directed industries will open new facilities, generating employment and strengthening the national economy." }
+    ];
+
+    function loadNews() {
+        const container = document.getElementById("news-container");
+        newsData.forEach(news => {
+            let newsItem = document.createElement("div");
+            newsItem.classList.add("news-item");
+            newsItem.innerHTML = `<div class='news-title'>${news.title}</div><p>${news.content}</p>`;
+            container.appendChild(newsItem);
+        });
+    }
+    
+    window.onload = loadNews;
+</script>
+
+</body>
+</html>
