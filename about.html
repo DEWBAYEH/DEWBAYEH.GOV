@@ -8,8 +8,18 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
+            background: url('flag.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adds opacity */
+            z-index: -1;
         }
         header {
             background-color: #003366;
@@ -17,12 +27,31 @@
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
+            text-align: center;
+        }
+        nav {
+            background-color: #002244;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #004488;
         }
         .content {
             padding: 20px;
-            max-width: 800px;
-            margin: auto;
-            text-align: left;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            text-align: center;
         }
         footer {
             background-color: #003366;
@@ -31,19 +60,27 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <header>About - The Authoritarian Republic of Dewbayeh</header><div class="content">
-    <h2>History</h2>
-    <p>Founded on <strong>2nd December 2022</strong>, the Authoritarian Republic of Dewbayeh emerged from a once desolate land into a thriving nation of order and prosperity. Under the unwavering vision of its leaders, Dewbayeh transformed into a beacon of strength, discipline, and national supremacy.</p>
-    
-    <h2>Leadership</h2>
-    <p>The nation is guided by the firm hands of <strong>The Generalissimo</strong> and <strong>The Senate</strong>. Together, they ensure stability, enforce absolute governance, and lead Dewbayeh toward an era of unmatched greatness. Their leadership is marked by strategic governance, national unity, and unwavering commitment to progress.</p>
-    
-    <h2>Ideology</h2>
-    <p>Dewbayeh upholds the principle of <strong>authoritarian leadership</strong>, where strength, discipline, and loyalty form the foundation of governance. The Generalissimo and The Senate rule with absolute authority, ensuring order, national prosperity, and an unbreakable state united under a single vision.</p>
+    <header>About - The Authoritarian Republic of Dewbayeh</header><nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="laws.html">Laws</a>
+    <a href="contact.html">Contact</a>
+    <a href="tourism.html">Tourism</a>
+    <a href="news.html">News</a>
+    <a href="services.html">Services</a>
+    <a href="recruitment.html">Recruitment</a>
+</nav>
+
+<div class="content">
+    <h2>History, Leadership, and Ideology</h2>
+    <p><strong>Founded on December 2, 2022</strong>, the Authoritarian Republic of Dewbayeh has risen from a once desolate land into a thriving state of power and opportunity. The nation has been meticulously shaped under the guidance of its resolute leadership.</p>
+    <p><strong>Leadership:</strong> The country is governed by <strong>The Generalissimo</strong> and <strong>The Senate</strong>, whose unwavering rule ensures stability and progress.</p>
+    <p><strong>Ideology:</strong> Dewbayeh thrives under a strict authoritarian structure where unity, discipline, and national supremacy guide every decision. Loyalty to the state is paramount, and every citizen plays a role in upholding the sovereignty of the nation.</p>
 </div>
 
 <footer>
