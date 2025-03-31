@@ -8,8 +8,18 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            text-align: center;
+            background: url('flag.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adds opacity */
+            z-index: -1;
         }
         header {
             background-color: #003366;
@@ -17,9 +27,31 @@
             padding: 20px;
             font-size: 24px;
             font-weight: bold;
+            text-align: center;
+        }
+        nav {
+            background-color: #002244;
+            padding: 10px;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #004488;
         }
         .content {
             padding: 20px;
+            color: white;
+            text-shadow: 1px 1px 2px black;
+            text-align: center;
         }
         footer {
             background-color: #003366;
@@ -28,15 +60,26 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <header>Home - The Authoritarian Republic of Dewbayeh</header><div class="content">
+    <header>Home - The Authoritarian Republic of Dewbayeh</header><nav>
+    <a href="home.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="laws.html">Laws</a>
+    <a href="contact.html">Contact</a>
+    <a href="tourism.html">Tourism</a>
+    <a href="news.html">News</a>
+    <a href="services.html">Services</a>
+    <a href="recruitment.html">Recruitment</a>
+</nav>
+
+<div class="content">
     <h2>Welcome to the Authoritarian Republic of Dewbayeh</h2>
-    <p>The <strong>Authoritarian Republic of Dewbayeh</strong> stands as a beacon of <strong>strength, unity, and unwavering leadership</strong>. Rooted in discipline and guided by a singular vision, our nation thrives under the principles of <strong>order, prosperity, and national supremacy</strong>. From the grand halls of governance to the industrious heart of our economy, every citizen of Dewbayeh plays a vital role in upholding the sovereignty and power of our great state.</p>
-    <p>Under the firm leadership of our <strong>supreme government</strong>, Dewbayeh has achieved unparalleled progress, boasting a thriving infrastructure, a disciplined society, and a secure environment where <strong>loyalty and duty</strong> are paramount. Our laws are built on the pillars of <strong>strength, justice, and absolute governance</strong>, ensuring stability and prosperity for generations to come.</p>
-    <p>With a <strong>rich cultural heritage</strong>, a <strong>formidable military presence</strong>, and an unwavering commitment to <strong>national excellence</strong>, Dewbayeh stands unchallenged—united under <strong>one flag, one government, and one destiny</strong>.</p>
+    <p>The Authoritarian Republic of Dewbayeh stands as a beacon of strength, unity, and unwavering leadership. Rooted in discipline and guided by a singular vision, our nation thrives under the principles of order, prosperity, and national supremacy.</p>
+    <p>With a rich cultural heritage, a formidable military presence, and an unwavering commitment to national excellence, Dewbayeh stands unchallenged—united under one flag, one government, and one destiny.</p>
     <p><strong>Loyalty is our foundation. Strength is our future. Glory to Dewbayeh!</strong></p>
 </div>
 
