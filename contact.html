@@ -47,14 +47,23 @@
         nav a:hover {
             background-color: #004488;
         }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            padding: 10px;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .content {
             padding: 20px;
             color: white;
             text-shadow: 1px 1px 2px black;
             text-align: left;
-        }
-        .contact-form {
-            margin-top: 20px;
         }
         footer {
             background-color: #003366;
@@ -65,40 +74,67 @@
             width: 100%;
             text-align: center;
         }
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+                text-align: right;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #002244;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 50px;
+            }
+            .nav-links a {
+                padding: 15px;
+                text-align: center;
+                width: 100%;
+                display: block;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("active");
+        }
+    </script>
 </head>
 <body>
-    <header>Contact - The Authoritarian Republic of Dewbayeh</header><nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="laws.html">Laws</a>
-    <a href="contact.html">Contact</a>
-    <a href="tourism.html">Tourism</a>
-    <a href="news.html">News</a>
-    <a href="services.html">Services</a>
-    <a href="recruitment.html">Recruitment</a>
+    <header>Contact Us</header><nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="laws.html">Laws</a>
+        <a href="contact.html">Contact</a>
+        <a href="tourism.html">Tourism</a>
+        <a href="news.html">News</a>
+        <a href="services.html">Services</a>
+        <a href="recruitment.html">Recruitment</a>
+    </div>
 </nav>
 
 <div class="content">
-    <h2>Official Contact Information</h2>
-    <p><strong>Government Address:</strong> The Central Hall, Dewbayeh City, Dewbayeh</p>
-    <p><strong>Email:</strong> cpagdewbayeh@gmail.com</p>
+    <h2>Official Communication</h2>
+    <p>The government of <strong>Dewbayeh</strong> maintains strict communication policies to ensure security and efficiency.</p>
+    <h3>Contact Form</h3>
+    <p><a href="https://forms.gle/kFmh49HvjFkRa26E9" target="_blank" style="color: yellow; font-weight: bold;">Click here to submit an inquiry</a></p>
     
-    <h2>Official Contact Form</h2>
-    <p>For official inquiries, please use the form below:</p>
-    <p><a href="https://forms.gle/oGCQM9DLtFzdPHG27" target="_blank" style="color: yellow; text-decoration: underline;">Click here to access the official contact form</a></p>
-    
-    <h2>State Communication Policy</h2>
-    <p>The government of Dewbayeh maintains a structured communication channel for official purposes. Only inquiries related to governance, public affairs, and authorized matters will receive responses.</p>
-    <p>All communications are subject to review by the administration. Responses are provided at the discretion of the governing authorities, based on priority and necessity.</p>
-    <p>Unauthorized or frivolous inquiries will not be entertained.</p>
+    <h3>Communication Policy</h3>
+    <ul>
+        <li>All communications are monitored for security purposes.</li>
+        <li>Unauthorized contact with foreign entities is prohibited.</li>
+        <li>Only verified citizens may submit official requests.</li>
+        <li>Responses are processed within the government's stipulated time frame.</li>
+    </ul>
 </div>
 
-<br>
-<br>
-<br>
-<br>
-    
 <footer>
     &copy; 2025 The Authoritarian Republic of Dewbayeh. All rights reserved.
 </footer>
