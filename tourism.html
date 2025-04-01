@@ -47,6 +47,18 @@
         nav a:hover {
             background-color: #004488;
         }
+        .menu-icon {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            padding: 10px;
+        }
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
         .content {
             padding: 20px;
             color: white;
@@ -62,18 +74,50 @@
             width: 100%;
             text-align: center;
         }
+        @media (max-width: 768px) {
+            .menu-icon {
+                display: block;
+                text-align: right;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #002244;
+                position: absolute;
+                width: 100%;
+                left: 0;
+                top: 50px;
+            }
+            .nav-links a {
+                padding: 15px;
+                text-align: center;
+                width: 100%;
+                display: block;
+            }
+            .nav-links.active {
+                display: flex;
+            }
+        }
     </style>
+    <script>
+        function toggleMenu() {
+            document.getElementById("nav-links").classList.toggle("active");
+        }
+    </script>
 </head>
 <body>
-    <header>Tourism - The Authoritarian Republic of Dewbayeh</header><nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="laws.html">Laws</a>
-    <a href="contact.html">Contact</a>
-    <a href="tourism.html">Tourism</a>
-    <a href="news.html">News</a>
-    <a href="services.html">Services</a>
-    <a href="recruitment.html">Recruitment</a>
+    <header>Tourism</header><nav>
+    <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="nav-links" id="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="laws.html">Laws</a>
+        <a href="contact.html">Contact</a>
+        <a href="tourism.html">Tourism</a>
+        <a href="news.html">News</a>
+        <a href="services.html">Services</a>
+        <a href="recruitment.html">Recruitment</a>
+    </div>
 </nav>
 
 <div class="content">
